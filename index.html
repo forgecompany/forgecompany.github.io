@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forge</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+</head>
+<body>
+    <div id="front_block">
+        <div id="top_container">
+            <span id="sign" class="animated_sign">Forge<span id="back_to_top" onclick="scrollTo('#front_block')">&#x2191;</span></span>
+            <nav id="navbar">
+                <ul id="navbar_list">
+                    <li onclick="scrollTo('#about_me')">About me</li>
+                    <li onclick="scrollTo('#services')">Services</li>
+                    <li onclick="scrollTo('#feedback')">Feedback</li>
+                    <li onclick="scrollTo('#contact')">Contact</li>
+                </ul>
+            </nav>
+        </div>
+        <div id="moto">
+            <span id="main_moto">Smith own world</span>
+            <span id="bottom_moto">with my help</span>
+        </div>
+        <span id="slide_left" onclick="changeBackgroundImage(-1)">&#x2190;</span>
+        <span id="slide_right" onclick="changeBackgroundImage(1)">&#x2192;</span>
+        <span id="down_arrow" onclick="scrollTo('#about_me')">&#x21e3;</span>
+    </div>
+
+    <div id="about_me">
+        <span id="me_title">Nice to meet you, I am</span>
+        <div id="me_main">
+            <div id="me">
+                <img id="me_photo" src="media/photo.jpg" alt="FaceImage">
+                <div id="me_description">
+                    <div>Bohdan Koval</div>
+                    <div>Full-Stack Web Developer</div>
+                    <div><img id="location_logo" src="media/location.png"><span>Kyiv, Ukraine</span></div>
+                    <div>Experienced and ambitious. Ready to perform any task regardless of its complexity. Face a problem with smile
+                        and intention to solve it in the best way. With passion to my job and desire to master it.</div>
+                    <div id="get_cv"><a href="docs/CV.pdf">View CV</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="divider" id="subdivider1"></div>
+    <div id="promotion">
+        <div class="promotion_section">
+            <div class="promotion_text left_text">
+                <span>Personality</span>
+                <div>I have personal attitude to every client. Online calls and 24/7 support. Because every client matters.</div>
+            </div>
+            <img src="media/personality.png" alt="personal" class="img_left">
+        </div>
+        <div class="promotion_divider"></div>
+        <div class="promotion_section">
+            <div class="promotion_text right_text">
+                <span>Productivity</span>
+                <div>Make everything in the best way. Every little thing works like switz clock. Because quality matters.</div>
+            </div>
+            <img src="media/productivity.png" alt="productivity" class="img_right">
+        </div>
+        <div class="promotion_divider"></div>
+        <div class="promotion_section">
+            <div class="promotion_text left_text">
+                <span>Savings</span>
+                <div>Value your resources. Everything have reasonable price. Best prices for best clients.</div>
+            </div>
+            <img src="media/money.png" alt="money" class="img_left">
+        </div>
+        <div class="promotion_divider"></div>
+        <div class="promotion_section">
+            <div class="promotion_text right_text">
+                <span>Timeness</span>
+                <div>Value your time as well. Because it's main resource for everyone. Deliver things in time.</div>
+            </div>
+            <img src="media/time.png" alt="time" class="img_right">
+        </div>
+    </div>
+    <div class="divider" id="divider1"></div>
+    <div id="services">
+        <span id="services_title">Brave New World</span>
+        <div class="services_section">
+            <div class="img_container"><img src="media/webdev.png" alt="Web Development"></div>
+            <div class="services_text left_section">
+                <span>Web Development</span>
+                <div>Everything that can be put on web, is available. From landing page to complicated web application.
+                That can be done due to vast amount of available tools and possibilities.</div>
+            </div>
+        </div>
+        <div class="services_section">
+            <div class="services_text right_section">
+                <span>E-Commerce</span>
+                <div>Everything to put your business online. Fancy design, content management systems, robust application
+                will catch every customers' request. Upgrade your business to new level.</div>
+            </div>
+            <div class="img_container"><img src="media/ecommerce.png" alt="E-Commerce"></div>
+        </div>
+        <div class="services_section">
+            <div class="img_container"><img src="media/scripts.png" alt="Scripts & Utilities"></div>
+            <div class="services_text left_section">
+                <span>Scripts & Utilities</span>
+                <div>Everything that can help you with manual work and will automatize your processes: from web application
+                to daemon processes. Do interesting thing by yourself and leave all boring stuff to computer.</div>
+            </div>
+        </div>
+        <div class="services_section">
+            <div class="services_text  right_section">
+                <span>Data Handling</span>
+                <div>Data is the most powerful and wide-spread thing in the world. Information is everywhere and in everything.
+                And it's clever to work with it. Data extraction, mining and visualization is here for you.</div>
+            </div>
+            <div class="img_container"><img src="media/data.png" alt="Data"></div>
+        </div>
+    </div>
+    <div class="divider" id="subdivider2"></div>
+    <div id="tools">
+        <span id="tools_title">Toolset</span>
+        <div class="set" id="backend_lang">
+            <span class="left_button">&#x2039;</span>
+            <div class="tool_logo"></div>
+            <span class="right_button">&#x203A;</span>
+            <span class="tool_sign">Back-End Languages</span>
+        </div>
+        <div class="set" id="backend_frame">
+            <span class="left_button">&#x2039;</span>
+            <div class="tool_logo"></div>
+            <span class="right_button">&#x203A;</span>
+            <span class="tool_sign">Back-End Frameworks</span>
+        </div>
+        <div class="set" id="database">
+            <span class="left_button">&#x2039;</span>
+            <div class="tool_logo"></div>
+            <span class="right_button">&#x203A;</span>
+            <span class="tool_sign">Databases</span>
+        </div>
+        <div class="set" id="frontend_core">
+            <span class="left_button">&#x2039;</span>
+            <div class="tool_logo"></div>
+            <span class="right_button">&#x203A;</span>
+            <span class="tool_sign">Front-End Core</span>
+        </div>
+        <div class="set" id="frontend_frame">
+            <div class="left_button">&#x2039;</div>
+            <div class="tool_logo"></div>
+            <div class="right_button">&#x203A;</div>
+            <span class="tool_sign">Front-End Libraries and Frameworks</span>
+        </div>
+        <div class="set" id="frontend_styles">
+            <span class="left_button">&#x2039;</span>
+            <div class="tool_logo"></div>
+            <span class="right_button">&#x203A;</span>
+            <span class="tool_sign">Front-End Styles</span>
+        </div>
+    </div>
+    <div class="divider" id="divider2"></div>
+    <div id="feedback">
+        <span id="feedback_title">They Say</span>
+        <div class="feedback_container">
+            <div class="feedback_text">
+                I was so impressed with how Bohdan completely understood my very complicated requirement,
+                and came up with a data-mining solution that did exactly what I needed!
+                He's communicative, polite and friendly, and I wouldn't hesitate to hire him again.
+            </div>
+            <div class="feedback_divider"></div>
+            <div class="feedback_stars">
+                <span>&#x2605;</span><span>&#x2605;</span><span>&#x2605;</span><span>&#x2605;</span><span>&#x2605;</span>
+            </div>
+        </div>
+        <div class="feedback_container">
+            <div class="feedback_text">
+                You don't have to say things to Bohdan twice.
+                He does everything right the first time. He is one of the best Upwork developers
+                and it was a pleasure working with him.
+            </div>
+            <div class="feedback_divider"></div>
+            <div class="feedback_stars">
+                <span>&#x2605;</span><span>&#x2605;</span><span>&#x2605;</span><span>&#x2605;</span><span>&#x2605;</span>
+            </div>
+        </div>
+        <div class="feedback_container">
+            <div class="feedback_text">
+                Working with Bohdan was a satisfying, stress-free experience.
+                He is an excellent full-stack developer, who also does analytics, visualization, scraping and hosting.
+                He works well, he respects deadlines and budgets, he speaks good English.
+                I enjoyed working with him, and he will be the first one I contact for my next job.
+            </div>
+            <div class="feedback_divider"></div>
+            <div class="feedback_stars">
+                <span>&#x2605;</span><span>&#x2605;</span><span>&#x2605;</span><span>&#x2605;</span><span>&#x2605;</span>
+            </div>
+        </div>
+        <a id="upwork" href="https://www.upwork.com/o/profiles/users/_~01968b0177be07a616/"><img src="media/upwork.png" alt="Upwork"></a>
+    </div>
+    <div class="divider" id="divider3"></div>
+    <div id="contact">
+        <span id="bottom_sign">Forge</span>
+        <div id="services_list">
+            <span>Web Development</span>
+            <span class="circle">&#x25CF;</span>
+            <span>E-Commerce</span>
+            <span class="circle">&#x25CF;</span>
+            <span>Scripts &amp; Utilities</span>
+            <span class="circle">&#x25CF;</span>
+            <span>Data Handling</span>
+        </div>
+        <span>Let's smith</span>
+        <span>start a project</span>
+        <div class="contact_var" id="viber">
+            <span class="contact_name">Viber Contact</span>
+            <span class="contact_info"><img src="media/viber.png">+380 (63) 695 05 51</span>
+        </div>
+        <div class="contact_var" id="email">
+            <span class="contact_name">E-mail Letter</span>
+            <span class="contact_info"><img src="media/gmail.png">thekovalbohdan@gmail.com</span>
+        </div>
+        <div class="contact_var" id="skype">
+            <span class="contact_name">Skype Call</span>
+            <span class="contact_info"><img src="media/skype.png">@thecybernash</span>
+        </div>
+        <br>
+        <span id="social_title">or chat in social networks</span>
+        <div id="social_nets">
+            <a href="https://www.facebook.com/thekovalbohdan"><img src="media/facebook.png" style="width: 34px"></a>
+            <a href="https://www.instagram.com/koval_bohdan"><img src="media/instagram.png" style="width: 34px"></a>
+            <a href="https://web.telegram.org/#/im?p=@koval_bohdan"><img src="media/tele.png" style="width: 34px"></a>
+            <a href="https://github.com/TheCyberNash"><img src="media/github.png" style="width: 34px"></a>
+        </div>
+        <div id="contact_epilogue">
+            Forge is web software and information company located in Kyiv, Ukraine. Founded in 2016 by Bohdan Koval. We're young
+            and looking for new coworkers. If you're interested in cooperation, contact me in the most convenient way.
+        </div>
+        <span id="year">2016</span>
+    </div>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
