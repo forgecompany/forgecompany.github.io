@@ -315,7 +315,14 @@ body {
     height: 40px;
     line-height: 40px;
     border-radius: 5px;
-    border: 2px solid rgba(255, 255, 255, 0.71)
+    border: 2px solid rgba(255, 255, 255, 0.71);
+    transition: border 0.5s, box-shadow 0.5s, -webkit-box-shadow 0.5s, -moz-box-shadow 0.5s;
+}
+#get_cv:hover {
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    -webkit-box-shadow: inset 0px 0px 2px 1px rgba(255,255,255,0.7);
+    -moz-box-shadow: inset 0px 0px 2px 1px rgba(255,255,255,0.7);
+    box-shadow: inset 0px 0px 2px 1px rgba(255,255,255,0.7);
 }
 #get_cv a {
     display: inline-block;
@@ -332,7 +339,7 @@ body {
     background-color: #1D334A;
 }
 #subdivider1 {
-    background: url('../media/skyskaper1.jpg') center bottom;
+    background: url('../media/skyscaper.jpg') center bottom;
     background-size: cover;
     height: 10vh;
 }
@@ -433,7 +440,7 @@ body {
     color: rgba(255, 255, 255, 1);
 }
 #services {
-    background-color: #e7e7e7;
+    background-color: #dedede;
 }
 #services_title {
     display: inline-block;
@@ -519,11 +526,17 @@ body {
 .left_button:hover, .right_button:hover {
     color: rgba(0, 0, 0, 0.5);
 }
-.tool_logo {
+.tool_container {
     display: inline-block;
+    overflow: hidden;
     width: 80%;
     margin-left: 2.5%;
     margin-right: 2.5%;
+}
+.tool_logo {
+    position: relative;
+    display: inline-block;
+    width: 100%;
     height: 25vh;
 }
 .tool_sign {
@@ -533,29 +546,69 @@ body {
     text-align: center;
     color: #333333;
 }
-#backend_lang .tool_logo {
+#backendlang1 {
      background: url("../media/logo/python.png") no-repeat center center;
      background-size: contain;
 }
-#backend_frame .tool_logo {
+#backendlang2 {
+    background: url("../media/logo/php.png") no-repeat center center;
+    background-size: contain;
+    display: none;
+}
+#backendframe1 {
     background: url("../media/logo/django.png") no-repeat center center;
     background-size: contain;
 }
-#database .tool_logo {
+#backendframe2 {
+    background: url("../media/logo/flask.png") no-repeat center center;
+    background-size: contain;
+    display: none;
+}
+#database1 {
     background: url("../media/logo/postgres.png") no-repeat center center;
     background-size: contain;
 }
-#frontend_core .tool_logo {
+#database2 {
+    background: url("../media/logo/mysql.png") no-repeat center center;
+    background-size: contain;
+    display: none;
+}
+#database3 {
+     background: url("../media/logo/mongo.png") no-repeat center center;
+     background-size: contain;
+    display: none;
+ }
+#frontendcore1 {
     background: url("../media/logo/js.png") no-repeat center center;
     background-size: contain;
 }
-#frontend_frame .tool_logo {
-    background: url("../media/logo/angular.png") no-repeat center center;
+#frontendcore2 {
+    background: url("../media/logo/html5.png") no-repeat center center;
+    background-size: contain;
+    display: none;
+}
+#frontendcore3 {
+    background: url("../media/logo/css3.png") no-repeat center center;
+    background-size: contain;
+    display: none;
+}
+#frontendframe1 {
+    background: url("../media/logo/jquery.png") no-repeat center center;
     background-size: contain;
 }
-#frontend_styles .tool_logo {
+#frontendframe2 {
+    background: url("../media/logo/angular.png") no-repeat center center;
+    background-size: contain;
+    display: none;
+}
+#frontendstyles1 {
     background: url("../media/logo/bootstrap.png") no-repeat center center;
     background-size: contain;
+}
+#frontendstyles2 {
+    background: url("../media/logo/sass.png") no-repeat center center;
+    background-size: contain;
+    display: none;
 }
 
 #feedback {
@@ -685,6 +738,12 @@ body {
     margin-right: 5%;
     padding-top: 10px;
     padding-bottom: 10px;
+    transition: box-shadow 0.3s;
+}
+#social_nets a:hover {
+    -webkit-box-shadow: inset 0px 0px 2px 1px rgba(255,255,255,0.7);
+    -moz-box-shadow: inset 0px 0px 2px 1px rgba(255,255,255,0.7);
+    box-shadow: inset 0px 0px 2px 1px rgba(255,255,255,0.7);
 }
 #contact_epilogue {
     width: 50%;

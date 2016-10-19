@@ -74,14 +74,20 @@ timer();
 $('#bottom_moto').delay(1000).fadeIn();
 
 // parallex effect
-var backgroundImageDivider = [$('#divider1'), $('#divider2'), $('#divider3'), $('#subdivider1'), $('#subdivider2')];
+var backgroundImageDivider = [$('#subdivider1'), $('#divider1'), $('#subdivider2'), $('#divider2'), $('#divider3')];
+var mainImage = $('#front_block');
 $(window).scroll(function () {
     var st = $(this).scrollTop();
-    backgroundImageDivider[0].css({'background-position':'center calc(0% + '+(st*.5)+'px)'});
-    backgroundImageDivider[1].css({'background-position':'center calc(-45% + '+(st*.5)+'px)'});
-    backgroundImageDivider[2].css({'background-position':'center calc(-130% + '+(st*.5)+'px)'});
-    backgroundImageDivider[3].css({'background-position':'center calc(-130% + '+(st*.5)+'px)'});
-    backgroundImageDivider[4].css({'background-position':'center calc(-130% + '+(st*.5)+'px)'});
+    backgroundImageDivider[0].css({'background-position':'center calc(50% + '+(st*.5)+'px)'});
+    backgroundImageDivider[1].css({'background-position':'center calc(-15% + '+(st*.5)+'px)'});
+    backgroundImageDivider[2].css({'background-position':'center calc(25% + '+(st*.5)+'px)'});
+    backgroundImageDivider[3].css({'background-position':'center calc(20% + '+(st*.5)+'px)'});
+    backgroundImageDivider[4].css({'background-position':'center calc(-20% + '+(st*.5)+'px)'});
+    if (st > $(window).height()*0.5) {
+        mainImage.css({'background-position':'0 calc('+((st*.5)-$(window).height()*0.5/2)+'px)'});
+    }else{
+        mainImage.css({'background-position':'0 0'});
+    }
 });
 
 // smooth scroll
@@ -90,3 +96,48 @@ function scrollTo(to) {
         scrollTop: $(to).offset().top - 45
     }, 500);
 }
+
+// tools slide
+var isDisplay = {
+    backendlang: {
+        current: 1,
+        amount: 2
+    },
+    backendframe: {
+        current: 1,
+        amount: 2
+    },
+    database: {
+        current: 1,
+        amount: 3
+    },
+    frontendcore: {
+        current: 1,
+        amount: 3
+    },
+    frontendframe: {
+        current: 1,
+        amount: 2
+    },
+    frontendstyles: {
+        current: 1,
+        amount: 2
+    }
+};
+$('.left_button, .right_button').click(function () {
+    var thisID = $(this).attr('id').split('_');
+    var thisSet = thisID[0], thisDir = thisID[1], direction;
+    if (thisDir == 'left') direction = -1;
+    if (thisDir == 'right') direction = 1;
+    var currentSlide = isDisplay[thisSet].current, nextSlide;
+    nextSlide = currentSlide + direction;
+    if (nextSlide == 0) nextSlide = isDisplay[thisSet].amount;
+    if (nextSlide > isDisplay[thisSet].amount) nextSlide = 1;
+    var toHide = '#' + thisSet + currentSlide;
+    var toShow = '#' + thisSet + nextSlide;
+    $(toHide).fadeOut(300);
+    setTimeout(function () {
+        $(toShow).fadeIn(300);
+    }, 300);
+    isDisplay[thisSet].current = nextSlide;
+});
