@@ -70,7 +70,7 @@ body {
     z-index: 9999;
 }
 .animated_sign {
-    color: rgba(255, 255, 255, 1);
+    color: rgb(255, 255, 255);
 }
 .animated_sign:hover {
     animation: hammer 1s;
@@ -93,7 +93,7 @@ body {
     transition: background-color 0.5s, color 0.5s;
 }
 #back_to_top:hover {
-    background-color: #1D334A;
+    background-color: rgba(59, 59, 59, 0.86);
     color: rgba(250, 250, 250, 1);
 }
 #navbar {
@@ -480,12 +480,19 @@ body {
     height: 40vh;
 }
 .services_text span {
+    display: inline-block;
     font-size: 26px;
     color: black;
 }
+.service_underline {
+    width: 98%;
+    height: 1px;
+    background-color: #000000;
+}
 .services_text div {
+    margin-top: 6px;
     font-size: 20px;
-    color: black;
+    color: rgb(49, 49, 49);
 }
 #subdivider2 {
     background: url('../media/datacenter.jpg') center bottom;
@@ -503,7 +510,7 @@ body {
     text-align: center;
     font-size: 40px;
     font-weight: bold;
-    color: #282828
+    color: black;
 }
 .set {
     display: inline-block;
@@ -622,7 +629,7 @@ body {
     text-align: center;
     font-size: 36px;
     font-weight: bold;
-    color: #343434;
+    color: black;
 }
 .feedback_container {
     width: 70%;
@@ -739,6 +746,9 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
     transition: box-shadow 0.3s;
+}
+#social_nets a img {
+    width: 34px;
 }
 #social_nets a:hover {
     -webkit-box-shadow: inset 0px 0px 2px 1px rgba(255,255,255,0.7);

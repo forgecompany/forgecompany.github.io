@@ -39,7 +39,7 @@ $(document).scroll(function () {
             'left': '0',
             'margin-left': '0',
             'color': 'white',
-            'background-color': '#1D334A'
+            'background-color': 'rgba(0, 0, 0, 0.5)'
         }).removeClass('animated_sign').fadeIn(200);
         $('#back_to_top').fadeIn().css('display', 'inline-block');
         $('#down_arrow').fadeOut();
@@ -78,15 +78,19 @@ var backgroundImageDivider = [$('#subdivider1'), $('#divider1'), $('#subdivider2
 var mainImage = $('#front_block');
 $(window).scroll(function () {
     var st = $(this).scrollTop();
-    backgroundImageDivider[0].css({'background-position':'center calc(50% + '+(st*.5)+'px)'});
-    backgroundImageDivider[1].css({'background-position':'center calc(-15% + '+(st*.5)+'px)'});
-    backgroundImageDivider[2].css({'background-position':'center calc(25% + '+(st*.5)+'px)'});
-    backgroundImageDivider[3].css({'background-position':'center calc(20% + '+(st*.5)+'px)'});
-    backgroundImageDivider[4].css({'background-position':'center calc(-20% + '+(st*.5)+'px)'});
-    if (st > $(window).height()*0.5) {
+    for (var i = 0; i < 5; i++) {
+        var topPosition = backgroundImageDivider[i].offset().top, mult;
+        if (i == 0 || i == 2) {
+            mult = .1;
+        }else{
+            mult = .25;
+        }
+        if (st > (topPosition-$(window).height()) && st < (topPosition+$(window).height()*mult)) {
+            backgroundImageDivider[i].css({'background-position':'center calc('+0.5*(st-topPosition+$(window).height()*(1+mult))+'px)'});
+        }
+    }
+    if (st > $(window).height()*0.5 && st < $(window).height()) {
         mainImage.css({'background-position':'0 calc('+((st*.5)-$(window).height()*0.5/2)+'px)'});
-    }else{
-        mainImage.css({'background-position':'0 0'});
     }
 });
 
