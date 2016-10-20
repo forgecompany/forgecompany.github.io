@@ -91,6 +91,8 @@ $(window).scroll(function () {
     }
     if (st > $(window).height()*0.5 && st < $(window).height()) {
         mainImage.css({'background-position':'0 calc('+((st*.5)-$(window).height()*0.5/2)+'px)'});
+    }else{
+        mainImage.css({'background-position': '0 0'});
     }
 });
 
