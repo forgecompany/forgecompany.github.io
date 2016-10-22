@@ -184,6 +184,7 @@ $(['los-angeles.png','kyiv.png','london.png']).preload();
 
 window.onload = function () {
     scrollTo('#front_block', 100);
+    $('#sign').css('background-color', 'transparent');
     $(".loader").fadeOut("slow");
     $("#menu").removeClass('open');
 };
