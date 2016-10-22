@@ -43,6 +43,7 @@ $(document).scroll(function () {
         }).removeClass('animated_sign').fadeIn(200);
         $('#back_to_top, #menu').fadeIn().css('display', 'inline-block');
         $('#down_arrow').fadeOut();
+        $('#menu').removeClass('open');
     } else if(scrollPosition == 0){
         $('#sign').css({
             'display': 'none',
@@ -59,6 +60,12 @@ $(document).scroll(function () {
         if ($('#menu').hasClass('open')) $('#menu').toggleClass('open');
         $('#navbar').fadeIn();
         $('#down_arrow').fadeIn();
+    }
+    if ($('#menu').hasClass('open')){
+        $('#menu').toggleClass('open');
+        $('#menu_navbar').fadeOut();
+        $('#hide_menu').hide();
+        $('#sign').css('background-color', 'rgba(0, 0, 0, 0.5)');
     }
 });
 
@@ -103,10 +110,14 @@ function scrollTo(to, speed) {
     $('html, body').animate({
         scrollTop: $(to).offset().top - 45
     }, speed);
-    $('#menu').toggleClass('open');
     $('#menu_navbar').fadeOut();
     $('#hide_menu').hide();
-    $('#sign').css('background-color', 'rgba(0, 0, 0, 0.5)');
+    if (to !='#front_block') {
+        setTimeout(function () {
+            $('#sign').css('background-color', 'rgba(0, 0, 0, 0.5)');
+        }, 50);
+    }
+    $('#menu').removeClass('open');
 }
 
 // tools slide
@@ -180,10 +191,11 @@ $.fn.preload = function() {
     });
 };
 
-$(['los-angeles.png','kyiv.png','london.png']).preload();
+$(['media/los-angeles.jpg','media/kyiv.jpg','media/london.jpg']).preload();
 
 window.onload = function () {
     scrollTo('#front_block', 100);
+    console.log($('#sign').css('background-color'));
     $('#sign').css('background-color', 'transparent');
     $(".loader").fadeOut("slow");
     $("#menu").removeClass('open');
