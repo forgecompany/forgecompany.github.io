@@ -12,7 +12,10 @@
 <body>
     <div id="front_block">
         <div id="top_container">
-            <span id="sign" class="animated_sign">Forge<span id="back_to_top" onclick="scrollTo('#front_block')">&#x2191;</span></span>
+            <span id="sign" class="animated_sign">
+                <span id="menu"><span></span><span></span><span></span></span>
+                <span id="sign_name">Forge</span>
+                <span id="back_to_top" onclick="scrollTo('#front_block')">&#x2191;</span></span>
             <nav id="navbar">
                 <ul id="navbar_list">
                     <li onclick="scrollTo('#about_me')">About me</li>
@@ -21,6 +24,13 @@
                     <li onclick="scrollTo('#contact')">Contact</li>
                 </ul>
             </nav>
+            <ul id="menu_navbar">
+                <li onclick="scrollTo('#about_me')">About me</li>
+                <li onclick="scrollTo('#services')">Services</li>
+                <li onclick="scrollTo('#feedback')">Feedback</li>
+                <li onclick="scrollTo('#contact')">Contact</li>
+            </ul>
+            <div id="hide_menu"></div>
         </div>
         <div id="moto">
             <span id="main_moto">Smith own world</span>

@@ -41,7 +41,7 @@ $(document).scroll(function () {
             'color': 'white',
             'background-color': 'rgba(0, 0, 0, 0.5)'
         }).removeClass('animated_sign').fadeIn(200);
-        $('#back_to_top').fadeIn().css('display', 'inline-block');
+        $('#back_to_top, #menu').fadeIn().css('display', 'inline-block');
         $('#down_arrow').fadeOut();
     } else if(scrollPosition == 0){
         $('#sign').css({
@@ -55,7 +55,8 @@ $(document).scroll(function () {
             'color': 'rgba(250, 250, 250, 0.95)',
             'background-color': 'transparent'
         }).addClass('animated_sign').fadeIn();
-        $('#back_to_top').css('display', 'none');
+        $('#back_to_top, #menu, #menu_navbar, #hide_menu').css('display', 'none');
+        if ($('#menu').hasClass('open')) $('#menu').toggleClass('open');
         $('#navbar').fadeIn();
         $('#down_arrow').fadeIn();
     }
@@ -101,6 +102,9 @@ function scrollTo(to) {
     $('html, body').animate({
         scrollTop: $(to).offset().top - 45
     }, 500);
+    $('#menu').toggleClass('open');
+    $('#menu_navbar').fadeOut();
+    $('#hide_menu').hide();
 }
 
 // tools slide
@@ -146,4 +150,21 @@ $('.left_button, .right_button').click(function () {
         $(toShow).fadeIn(300);
     }, 300);
     isDisplay[thisSet].current = nextSlide;
+});
+
+// menu icon
+$('#menu').click(function () {
+    $(this).toggleClass('open');
+    if($(this).hasClass('open')){
+        $('#menu_navbar').fadeIn();
+        $('#hide_menu').show();
+    }else{
+        $('#menu_navbar').fadeOut();
+        $('#hide_menu').hide();
+    }
+});
+$('#hide_menu').click(function () {
+   $('#menu_navbar').fadeOut();
+    $('#hide_menu').hide();
+    $('#menu').toggleClass('open');
 });
