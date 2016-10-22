@@ -98,10 +98,11 @@ $(window).scroll(function () {
 });
 
 // smooth scroll
-function scrollTo(to) {
+function scrollTo(to, speed) {
+    var speed = speed ? speed : 500;
     $('html, body').animate({
         scrollTop: $(to).offset().top - 45
-    }, 500);
+    }, speed);
     $('#menu').toggleClass('open');
     $('#menu_navbar').fadeOut();
     $('#hide_menu').hide();
@@ -168,3 +169,16 @@ $('#hide_menu').click(function () {
     $('#hide_menu').hide();
     $('#menu').toggleClass('open');
 });
+
+$.fn.preload = function() {
+    this.each(function(){
+        $('<img/>')[0].src = this;
+    });
+};
+
+$(['los-angeles.png','kyiv.png','london.png']).preload();
+
+window.onload = function () {
+    scrollTo('#front_block', 100);
+    $(".loader").fadeOut("slow");
+};
