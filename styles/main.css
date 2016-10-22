@@ -608,6 +608,11 @@ body {
     background-size: contain;
     display: none;
 }
+#frontendframe3 {
+    background: url("../media/logo/d3.png") no-repeat center center;
+    background-size: contain;
+    display: none;
+}
 #frontendstyles1 {
     background: url("../media/logo/bootstrap.png") no-repeat center center;
     background-size: contain;

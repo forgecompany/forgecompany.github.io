@@ -123,7 +123,7 @@ var isDisplay = {
     },
     frontendframe: {
         current: 1,
-        amount: 2
+        amount: 3
     },
     frontendstyles: {
         current: 1,
