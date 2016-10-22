@@ -106,6 +106,7 @@ function scrollTo(to, speed) {
     $('#menu').toggleClass('open');
     $('#menu_navbar').fadeOut();
     $('#hide_menu').hide();
+    $('#sign').css('background-color', 'rgba(0, 0, 0, 0.5)');
 }
 
 // tools slide
@@ -159,15 +160,18 @@ $('#menu').click(function () {
     if($(this).hasClass('open')){
         $('#menu_navbar').fadeIn();
         $('#hide_menu').show();
+        $('#sign').css('background-color', 'black');
     }else{
         $('#menu_navbar').fadeOut();
         $('#hide_menu').hide();
+        $('#sign').css('background-color', 'rgba(0, 0, 0, 0.5)');
     }
 });
 $('#hide_menu').click(function () {
    $('#menu_navbar').fadeOut();
     $('#hide_menu').hide();
     $('#menu').toggleClass('open');
+    $('#sign').css('background-color', 'rgba(0, 0, 0, 0.5)');
 });
 
 $.fn.preload = function() {
@@ -181,4 +185,5 @@ $(['los-angeles.png','kyiv.png','london.png']).preload();
 window.onload = function () {
     scrollTo('#front_block', 100);
     $(".loader").fadeOut("slow");
+    $("#menu").removeClass('open');
 };

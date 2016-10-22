@@ -178,7 +178,7 @@ body {
     left: 0;
     width: 100%;
     padding-left: 0;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgb(26, 26, 26);
     z-index: 9998;
 }
 #menu_navbar li {
