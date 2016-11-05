@@ -33,9 +33,9 @@ $(document).scroll(function () {
         $('#sign').css({
             'display': 'none',
             'width': '100%',
-            'height': '46px',
+            'height': '7vh',
             'position': 'fixed',
-            'font-size': '34px',
+            'font-size': '5.1vh',
             'left': '0',
             'margin-left': '0',
             'color': 'white',
@@ -48,7 +48,7 @@ $(document).scroll(function () {
         $('#sign').css({
             'display': 'none',
             'position': 'absolute',
-            'font-size': '54px',
+            'font-size': '8.25vh',
             'left': '18%',
             'margin-left': '-90px',
             'width': '180px',

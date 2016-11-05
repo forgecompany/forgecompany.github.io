@@ -21,7 +21,7 @@ body {
 }
 #top_container {
     width: 100%;
-    height: 84px;
+    height: 12.63vh;
 }
 @-webkit-keyframes hammer {
     0% {
@@ -67,7 +67,7 @@ body {
     left: 18%;
     margin-left: -90px;
     display: inline-block;
-    font-size: 54px;
+    font-size: 8.25vh; /*font*/
     text-align: center;
     width: 180px;
     height: 80px;
@@ -91,12 +91,12 @@ body {
 }
 #menu {
     display: none;
-    width: 30px;
+    width: 4.58vh;
     cursor: pointer;
-    height: 20px;
+    height: 3.05vh;
     position: relative;
     float: left;
-    margin-top: 12.5px;
+    margin-top: 1.88vh;
     margin-left: 2%;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -111,10 +111,10 @@ body {
     display: block;
     background-color: rgba(255, 255, 255, 0.66);
     width: 100%;
-    height: 4px;
+    height: 0.6vh;
     position: absolute;
     left: 0;
-    border-radius: 2px;
+    border-radius: 0.3vh;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -135,14 +135,14 @@ body {
     transform-origin: left center;
 }
 #menu span:nth-child(2) {
-    top: 8px;
+    top: 1.2vh;
     -webkit-transform-origin: left center;
     -moz-transform-origin: left center;
     -o-transform-origin: left center;
     transform-origin: left center;
 }
 #menu span:nth-child(3) {
-    top: 16px;
+    top: 2.4vh;
     -webkit-transform-origin: left center;
     -moz-transform-origin: left center;
     -o-transform-origin: left center;
@@ -154,7 +154,7 @@ body {
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
     left: 5px;
-    width: 23px;
+    width: 3.45vh;
 }
 
 #menu.open span:nth-child(2) {
@@ -168,13 +168,13 @@ body {
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
     left: 5px;
-    width: 23px;
+    width: 3.45vh;
 }
 
 #menu_navbar {
     display: none;
     position: fixed;
-    top: 46px;
+    top: 7vh;
     left: 0;
     width: 100%;
     padding-left: 0;
@@ -184,7 +184,7 @@ body {
 #menu_navbar li {
     display: block;
     width: 100%;
-    font-size: 24px;
+    font-size: 3.6vh;
     color: rgba(255, 255, 255, 0.8);
     padding-top: 8px;
     padding-bottom: 8px;
@@ -202,23 +202,23 @@ body {
     width: 100%;
     top: 226px;
     z-index: 9998;
-    height: calc(100vh - 226px);
+    height: 65.5vh;
 }
 
 
 #back_to_top {
     display: none;
     position: absolute;
-    width: 34px;
-    height: 34px;
-    line-height: 34px;
-    font-size: 20px;
+    width: 5.1vh;
+    height: 5.1vh;
+    line-height: 5.1vh;
+    font-size: 3.05vh; /*font-here*/
     text-align: center;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.4);
     color: #101320;
     top: 50%;
-    margin-top: -17px;
+    margin-top: -2.6vh;
     right: 2%;
     cursor: pointer;
     transition: background-color 0.5s, color 0.5s;
@@ -230,22 +230,22 @@ body {
 #navbar {
     width: 60%;
     float: right;
-    margin: 11px 4% 0 0;
+    margin: 1.68vh 4% 0 0;
 }
 #navbar_list {
     width: 100%;
-    margin: inherit;
+    margin: 1.68vh;
     list-style-type: none;
     padding-left: 0;
 }
 #navbar_list li {
     display: inline-block;
     width: 25%;
-    height: 40px;
-    line-height: 40px;
-    font-size: 22px;
+    height: 6.1vh;
+    line-height: 6.1vh;
+    font-size: 3.35vh; /*font-here*/
     text-align: center;
-    padding-bottom: 3px;
+    padding-bottom: 0.5vh;
     cursor: pointer;
     transition: color .4s ease;
     color: rgba(255, 255, 255, 1);
@@ -270,13 +270,13 @@ body {
 #slide_left, #slide_right {
     position: absolute;
     top: 50%;
-    margin-top: -14px;
-    width: 36px;
-    line-height: 32px;
-    height: 36px;
+    margin-top: -2.75vh;
+    width: 5.5vh;
+    line-height: 4.9vh;
+    height: 5.5vh;
     text-align: center;
     display: inline-block;
-    font-size: 28px;
+    font-size: 4.25vh; /*font-here*/
     color: rgba(250, 250, 250, 0.4);
     border-radius: 50%;
     border: 2px solid rgba(250, 250, 250, 0.4);
@@ -296,11 +296,11 @@ body {
 #moto {
     position: absolute;
     top: 50%;
-    margin-top: -60px;
-    width: 760px;
+    margin-top: -9vh;
+    width: 100%;
     left: 50%;
-    margin-left: -380px;
-    height: 120px;
+    margin-left: -50%;
+    height: 18vh;
     text-align: center;
     color: rgba(250, 250, 250, 1);
     cursor: default;
@@ -309,13 +309,13 @@ body {
 #main_moto {
     display: inline-block;
     font-weight: bold;
-    font-size: 58px;
+    font-size: 8.85vh; /*font-here*/
     width: inherit;
     transition: font-size 0.5s;
 }
 #bottom_moto {
     display: none;
-    font-size: 40px;
+    font-size: 6.1vh; /*font-here*/
     width: inherit;
     transition: font-size 0.5s;
 }
@@ -347,16 +347,16 @@ body {
 #down_arrow {
     position: absolute;
     left: 50%;
-    margin-left: -25px;
+    margin-left: -3.05vh;
     bottom: 1%;
     display: inline-block;
-    width: 40px;
-    height: 60px;
-    border-radius: 25px;
+    width: 6.1vh;
+    height: 9.16vh;
+    border-radius: 3.05vh;
     text-align: center;
     z-index: 1000;
-    line-height: 60px;
-    font-size: 40px;
+    line-height: 9.16vh;
+    font-size: 6.1vh;
     border: 2px solid rgba(255, 255, 255, 0.6);
     animation: shake_updown 1.5s infinite;
     color: rgba(255, 255, 255, 0.7);
@@ -377,18 +377,18 @@ body {
     position: relative;
     width: 50%;
     right: -25%;
-    font-size: 44px;
+    font-size: 6.7vh;
     color: rgba(255, 255, 255, 1);
     text-align: center;
-    margin-top: 32px;
-    padding-bottom: 4px;
+    margin-top: 4.9vh;
+    padding-bottom: 0.6vh;
 }
 #me_title::after {
     content: "";
     position: absolute;
-    bottom: 2px;
+    bottom: 0.3vh;
     left: 0;
-    height: 1px;
+    height: 0.15vh;
     width: 100%;
     background: rgba(255, 255, 255, 0.9);
 }
@@ -417,35 +417,35 @@ body {
     color: rgba(255, 255, 255, 1);
 }
 #me_description div:nth-child(1) {
-    font-size: 42px;
+    font-size: 6.4vh;
 }
 #me_description div:nth-child(2) {
-    margin-top: 2px;
-    font-size: 30px;
+    margin-top: 0.3vh;
+    font-size: 4.58vh;
 }
 #location_logo {
-    height: 20px;
+    height: 3.05vh;
 }
 #me_description div:nth-child(3), #me_description div:nth-child(4) {
-    font-size: 20px;
+    font-size: 3.05vh;
 }
 #me_description div:nth-child(3) {
-    margin-top: 6px;
+    margin-top: 0.9vh;
 }
 #me_description div:nth-child(4) {
-    margin-top: 12px;
+    margin-top: 1.8vh;
 }
 #me_description span {
     margin-left: 5px;
 }
 #get_cv {
-    margin-top: 20px;
+    margin-top: 3.05vh;
     text-align: center;
     width: 20%;
-    font-size: 20px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 5px;
+    font-size: 3.05vh;
+    height: 6.1vh;
+    line-height: 6.1vh;
+    border-radius: 0.76vh;
     border: 2px solid rgba(255, 255, 255, 0.71);
     transition: border 0.5s, box-shadow 0.5s, -webkit-box-shadow 0.5s, -moz-box-shadow 0.5s;
 }
@@ -480,14 +480,14 @@ body {
     padding-bottom: 8vh;
 }
 .promotion_text span {
-    font-size: 26px;
+    font-size: 3.9vh;
     color: white
 }
 .promotion_section {
     height: 25vh;
 }
 .promotion_text div {
-    font-size: 20px;
+    font-size: 3.05vh;
     color: white;
 }
 .promotion_text {
@@ -525,8 +525,8 @@ body {
     height: 1px;
     background-color: aliceblue;
     margin-left: 25%;
-    margin-top: 3px;
-    margin-bottom: 3px;
+    margin-top: 0.45vh;
+    margin-bottom: 0.45vh;
 }
 #divider1 {
     background: url('../media/sunrise.jpg') center bottom;
@@ -543,11 +543,11 @@ body {
 .section_header {
     display: inline-block;
     width: 100%;
-    font-size: 48px;
+    font-size: 7.2vh;
     text-align: center;
     color: rgba(255, 255, 255, 1);
-    margin-top: 22px;
-    margin-bottom: 20px;
+    margin-top: 3.35vh;
+    margin-bottom: 3.05vh;
     font-weight: bold;
 }
 #about_me, #services, #feedback, #contact {
@@ -555,7 +555,7 @@ body {
 }
 .section_element {
     width: 100%;
-    font-size: 28px;
+    font-size: 4.25vh;
 }
 .section_element img {
     display: inline-block;
@@ -577,7 +577,7 @@ body {
     display: inline-block;
     width: 100%;
     text-align: center;
-    font-size: 36px;
+    font-size: 5.4vh;
     font-weight: bold;
     color: black;
     margin-top: 2%;
@@ -612,7 +612,7 @@ body {
 }
 .services_text span {
     display: inline-block;
-    font-size: 26px;
+    font-size: 3.9vh;
     color: black;
 }
 .service_underline {
@@ -621,8 +621,8 @@ body {
     background-color: #000000;
 }
 .services_text div {
-    margin-top: 6px;
-    font-size: 20px;
+    margin-top: 0.9vh;
+    font-size: 3.05vh;
     color: rgb(49, 49, 49);
 }
 #subdivider2 {
@@ -639,7 +639,7 @@ body {
     display: inline-block;
     width: 100%;
     text-align: center;
-    font-size: 40px;
+    font-size: 6.1vh;
     font-weight: bold;
     color: black;
 }
@@ -657,7 +657,7 @@ body {
     vertical-align: top;
     text-align: center;
     line-height: 25vh;
-    font-size: 40px;
+    font-size: 6.1vh;
     color: rgba(0, 0, 0, 0.24);
     cursor: pointer;
 }
@@ -680,7 +680,7 @@ body {
 .tool_sign {
     display: inline-block;
     width: 100%;
-    font-size: 22px;
+    font-size: 3.35vh;
     text-align: center;
     color: #333333;
 }
@@ -763,7 +763,7 @@ body {
     margin-bottom: 3%;
     width: 100%;
     text-align: center;
-    font-size: 36px;
+    font-size: 5.4vh;
     font-weight: bold;
     color: black;
 }
@@ -776,8 +776,8 @@ body {
 .feedback_text {
     width: 80%;
     margin-left: 10%;
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 3.05vh;
+    margin-bottom: 1.5vh;
 }
 .feedback_divider {
     width: 100%;
@@ -786,19 +786,19 @@ body {
 }
 .feedback_stars {
     text-align: center;
-    font-size: 36px;
+    font-size: 5.4vh;
     color: rgb(150, 217, 83);
 }
 #upwork {
     display: inline-block;
     width: 100%;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 3.05vh;
 }
 #upwork img {
     position: relative;
-    top: -30px;
-    height: 84px;
+    top: -4.5vh;
+    height: 12.63vh;
 }
 #contact {
     background-color: #2e383f;
@@ -806,7 +806,7 @@ body {
 #bottom_sign {
     display: inline-block;
     width: 100%;
-    font-size: 56px;
+    font-size: 8.42vh;
     color: white;
     text-align: center;
     font-family: 'Lobster', cursive;
@@ -816,13 +816,13 @@ body {
     margin-top: 1.5%;
     width: 100%;
     text-align: center;
-    height: 20px;
-    line-height: 20px;
+    height: 3.05vh;
+    line-height: 3.05vh;
     color: white;
-    font-size: 20px;
+    font-size: 3.05vh;
 }
 .circle {
-    font-size: 8px;
+    font-size: 1.2vh;
     vertical-align: middle;
     margin-left: 0.5%;
     margin-right: 0.5%;
@@ -838,25 +838,25 @@ body {
 .contact_name {
     display: inline-block;
     width: 100%;
-    font-size: 26px;
+    font-size: 3.9vh;
 }
 #email .contact_name {
-    margin-bottom: 6px;
+    margin-bottom: 0.9vh;
 }
 .contact_info {
-    font-size: 22px;
+    font-size: 3.35vh;
 }
 .contact_var img {
-    width: 28px;
-    margin-right: 10px;
+    width: 4.25vh;
+    margin-right: 1.5vh;
 }
 #skype img {
     position: relative;
-    top: 6px;
+    top: 0.9vh;
 }
 #viber img {
     position: relative;
-    top: 4px;
+    top: 0.6vh;
 }
 #social_title {
     display: inline-block;
@@ -864,7 +864,7 @@ body {
     width: 100%;
     text-align: center;
     color: white;
-    font-size: 22px;
+    font-size: 3.35vh;
 }
 #social_nets {
     text-align: center;
@@ -875,16 +875,16 @@ body {
 #social_nets a {
     display: inline-block;
     width: 10%;
-    border-radius: 8px;
+    border-radius: 1.2vh;
     border: 2px solid white;
     margin-left: 5%;
     margin-right: 5%;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
     transition: box-shadow 0.3s;
 }
 #social_nets a img {
-    width: 34px;
+    width: 5.1vh;
 }
 #social_nets a:hover {
     -webkit-box-shadow: inset 0px 0px 2px 1px rgba(255,255,255,0.7);
@@ -894,7 +894,7 @@ body {
 #contact_epilogue {
     width: 50%;
     color: #d2d2d2;
-    font-size: 16px;
+    font-size: 2.4vh;
     text-align: center;
     margin-left: 25%;
     margin-top: 2%;
@@ -903,8 +903,9 @@ body {
     display: inline-block;
     width: 100%;
     text-align: center;
-    font-size: 18px;
+    font-size: 2.7vh;
     color: #f9f9f9;
     margin-top: 1%;
     margin-bottom: 1%;
 }
+
