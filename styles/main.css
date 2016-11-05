@@ -908,4 +908,25 @@ body {
     margin-top: 1%;
     margin-bottom: 1%;
 }
+.rotate {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 9999;
+    background: url('../media/rotate.gif') 50% 50% no-repeat rgb(135, 135, 135);
+}
 
+@media screen and (max-width: 1000px) {
+    .rotate, #subdivider1, #promotion {
+        display: none;
+    }
+
+}
+@media screen and (orientation: portrait) {
+    .rotate {
+        display: block;
+    }
+}
