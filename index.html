@@ -17,20 +17,20 @@
             <span id="sign" class="animated_sign">
                 <span id="menu"><span></span><span></span><span></span></span>
                 <span id="sign_name">Forge</span>
-                <span id="back_to_top" onclick="scrollTo('#front_block')">&#x2191;</span></span>
+                <span id="back_to_top" onclick="document.getElementById('front_block').scrollIntoView()">&#x2191;</span></span>
             <nav id="navbar">
                 <ul id="navbar_list">
-                    <li onclick="scrollTo('#about_me')">About me</li>
-                    <li onclick="scrollTo('#services')">Services</li>
-                    <li onclick="scrollTo('#feedback')">Feedback</li>
-                    <li onclick="scrollTo('#contact')">Contact</li>
+                    <li onclick="document.getElementById('about_me').scrollIntoView()">About me</li>
+                    <li onclick="document.getElementById('services').scrollIntoView()">Services</li>
+                    <li onclick="document.getElementById('feedback').scrollIntoView()">Feedback</li>
+                    <li onclick="document.getElementById('contact').scrollIntoView()">Contact</li>
                 </ul>
             </nav>
             <ul id="menu_navbar">
-                <li onclick="scrollTo('#about_me')">About me</li>
-                <li onclick="scrollTo('#services')">Services</li>
-                <li onclick="scrollTo('#feedback')">Feedback</li>
-                <li onclick="scrollTo('#contact')">Contact</li>
+              <li onclick="document.getElementById('about_me').scrollIntoView()">About me</li>
+              <li onclick="document.getElementById('services').scrollIntoView()">Services</li>
+              <li onclick="document.getElementById('feedback').scrollIntoView()">Feedback</li>
+              <li onclick="document.getElementById('contact').scrollIntoView()">Contact</li>
             </ul>
             <div id="hide_menu"></div>
         </div>
@@ -40,7 +40,7 @@
         </div>
         <span id="slide_left" onclick="changeBackgroundImage(-1)">&#x2190;</span>
         <span id="slide_right" onclick="changeBackgroundImage(1)">&#x2192;</span>
-        <span id="down_arrow" onclick="scrollTo('#about_me')">&#x21e3;</span>
+        <span id="down_arrow" onclick="document.getElementById('about_me').scrollIntoView()">&#x21e3;</span>
     </div>
 
     <div id="about_me">
